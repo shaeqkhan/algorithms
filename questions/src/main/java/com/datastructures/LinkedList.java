@@ -19,6 +19,10 @@ public class LinkedList {
 		tail = node;
 	}
 	
+	public void setHead(Node head) {
+		this.head = head; 
+	}
+	
 	public static class Node {
 		
 		private Node next;
