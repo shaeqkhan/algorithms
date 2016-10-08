@@ -1,6 +1,7 @@
 package com.trees;
 
-import org.junit.After;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -111,5 +112,12 @@ public class BinarySearchTreeTest {
 		System.out.println("\n\nDelete Node : 9");
         tree.delete(9);        
         BinarySearchTreePrinter.printNode(tree.root);
+	}
+	
+	@Test
+	public void testIsBSTValid() {
+		System.out.println("Is BST Valid?");
+		BinarySearchTreePrinter.printNode(tree.root);
+		assertTrue(tree.isBSTValid());
 	}
 }

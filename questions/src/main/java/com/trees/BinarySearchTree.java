@@ -221,6 +221,27 @@ public class BinarySearchTree {
 				
 	}
 	
+	public  boolean isBSTValid() {
+		
+		return checkBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+		
+	}
+	
+	private static boolean checkBST(BSTNode<Integer> root, int minValue, int maxValue) {
+		
+		if(root == null)
+			return true;
+		
+		if(root.key < minValue || root.key > maxValue)
+			return false;
+		
+		boolean isLeftTreeValid = checkBST(root.left, minValue, root.key - 1);
+		boolean isRightTreeValid = checkBST(root.right, root.key + 1, maxValue);
+		
+		return isLeftTreeValid && isRightTreeValid;
+		
+	}
+
 	private void deleteNodeWithOneChild(BSTNode<Integer> parent, BSTNode<Integer> targetNode) {
 		
 		//get non-null child of target
