@@ -37,5 +37,13 @@ public class AnagramsTest {
 		System.out.println("test3");
 		assertEquals(2, anagrams.calculate(a, b));
 	}
+	
+	@Test
+	public void test4() {
+		final String a = "fcrxzwscanmligyxyvym";
+		final String b = "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
+		System.out.println("test4");
+		assertEquals(30, anagrams.calculate(a, b));
+	}
 
 }

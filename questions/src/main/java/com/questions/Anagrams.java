@@ -59,7 +59,7 @@ public class Anagrams {
 		 * 				d		  -1
          */
         for(char c : second.toCharArray()) {
-        	int count = 1;
+        	int count = -1;
             if(charCounterMap.containsKey(c)) {
             	count = charCounterMap.get(c);
             	count--;
@@ -73,7 +73,7 @@ public class Anagrams {
         int charRemoved = 0;
         for(Integer i : charCounterMap.values()) {
         	if(i != 0) {
-               charRemoved++; 
+               charRemoved += Math.abs(i); 
             }
         }
         
