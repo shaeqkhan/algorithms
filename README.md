@@ -1,1 +1,1 @@
-Practice for algorithms and data structures
+Occasional practice for algorithms and data structures.
